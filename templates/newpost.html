@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>New Post</title>
+{% endblock %}
+
+{% block body %}
+<h2>Create New Blog Post</h2>
+
+  <hr>
+    <form action='/newpost' method='POST'>
+      	Title: <input class="form-control" type="text" name='title' id='title' placeholder="Type the Title of the blog" aria-label="Type the Title of the blog">
+      	<br>
+      	Write your Blog here:<br>
+    	<textarea class="form-control" name='blog' id='blog' rows="3"></textarea>
+    	<input type='submit' class="btn btn-success" value='Post!'>
+    	<br>
+    </form>
+  <hr>
+
+{% endblock %}

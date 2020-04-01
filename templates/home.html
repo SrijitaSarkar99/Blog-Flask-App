@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>All Posts</title>
+{% endblock %}
+
+
+{% block body %}
+
+<h2>All Your Posts</h2>
+
+<table>
+{% for item in items %}
+   <hr>
+   <h5>{{ item[0] }}</h5>
+   <p>{{ item[1] }}</p>
+   <a class="btn btn-danger" href='/delete/{{ item[0] }}'>Delete</a>
+{% endfor %}
+<hr>
+
+{% endblock %}
+ 
